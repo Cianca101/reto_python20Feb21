@@ -6,7 +6,10 @@
 
 def factorial(num):
     resultado = 1
-    for i in range(num):
-        resultado *= (i + 1)
-    return resultado
+    if num >= 0 and isinstance(num, int):
+        for i in range(num):
+            resultado *= (i + 1)
+        return resultado
+    else:
+        return None, "Dato no valido"
 
